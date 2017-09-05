@@ -9,7 +9,7 @@ import org.junit.Test;
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.isIn;
+import static org.hamcrest.Matchers.in;
 
 public class SmsTest {
     @Test
@@ -18,6 +18,6 @@ public class SmsTest {
 
         sms.send(new TimeFormatterNumeric(new ClockForTesting(12,0,0, "LOCAL")).formatTime());
 
-        assertThat(sms.getStatus(), isIn(new Message.Status[]{Message.Status.QUEUED,Message.Status.ACCEPTED, Message.Status.DELIVERED,Message.Status.RECEIVED,Message.Status.RECEIVING,Message.Status.SENDING, Message.Status.SENT}));
+        assertThat(sms.getStatus(), in(new Message.Status[]{Message.Status.QUEUED,Message.Status.ACCEPTED, Message.Status.DELIVERED,Message.Status.RECEIVED,Message.Status.RECEIVING,Message.Status.SENDING, Message.Status.SENT}));
     }
 }
