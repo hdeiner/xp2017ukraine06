@@ -16,7 +16,7 @@ public class MessengerTest {
         thrown.expect(IOException.class);
         thrown.expectMessage("xyzzy.properties (No such file or directory)");
 
-        Messenger messenger = new Messenger("xyzzy.properties");
+        new Messenger("xyzzy.properties");
     }
 
 }

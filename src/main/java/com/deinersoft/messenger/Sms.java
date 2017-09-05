@@ -7,7 +7,7 @@ import com.twilio.type.PhoneNumber;
 import java.io.IOException;
 
 public class Sms extends Messenger {
-    Message message;
+    private Message message;
 
     public Sms(String configurationFile) throws IOException {
         super(configurationFile);

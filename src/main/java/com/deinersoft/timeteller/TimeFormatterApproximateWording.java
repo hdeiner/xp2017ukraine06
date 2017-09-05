@@ -2,9 +2,9 @@ package com.deinersoft.timeteller;
 
 public class TimeFormatterApproximateWording extends TimeFormatter {
 
-    public static final int SECONDS_IN_A_HALF_MINUTE = 30;
-    public static final int HOURS_IN_A_QUARTER_OF_A_DAY = 6;
-    public static final int MINUTE_TO_START_FUZZING_INTO_NEXT_HOUR = 35;
+    private static final int SECONDS_IN_A_HALF_MINUTE = 30;
+    private static final int HOURS_IN_A_QUARTER_OF_A_DAY = 6;
+    private static final int MINUTE_TO_START_FUZZING_INTO_NEXT_HOUR = 35;
 
     public TimeFormatterApproximateWording(Clock clock) {
         super(clock);
@@ -33,8 +33,8 @@ public class TimeFormatterApproximateWording extends TimeFormatter {
 
         formattedTime += " " + quadrantOfTheDay[hour/HOURS_IN_A_QUARTER_OF_A_DAY];
 
-        if (clock.getTimeZone() == "LOCAL") { return formattedTime; }
-        if (clock.getTimeZone() == "UTC") { return formattedTime + " Zulu"; };
+        if (clock.getTimeZone().equals("LOCAL")) { return formattedTime; }
+        if (clock.getTimeZone().equals("UTC")) { return formattedTime + " Zulu"; }
         return formattedTime + " " + clock.getTimeZone();
     }
 
