@@ -7,9 +7,9 @@ public class TimeFormatterApproximateWording extends TimeFormatter {
     private static final int MINUTES_TO_ROUND_TO = 5;
     private static final int MINUTE_TO_START_FUZZING_INTO_NEXT_HOUR = 35;
 
-    private static String[] NAMES_OF_THE_HOURS = {"twelve", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven"};
-    private static String[] FUZZY_TIME_WORDS = {"about", "a little after", "about ten after", "about a quarter after", "about twenty after", "almost half past", "about half past", "almost twenty before", "about twenty before", "about a quarter of", "about ten of", "almost", "about"};
-    private static String[] QUADRANTS_OF_THE_DAY = {"at night", "in the morning", "in the afternoon", "in the evening"};
+    private static final String[] NAMES_OF_THE_HOURS = {"twelve", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven"};
+    private static final String[] FUZZY_TIME_WORDS = {"about", "a little after", "about ten after", "about a quarter after", "about twenty after", "almost half past", "about half past", "almost twenty before", "about twenty before", "about a quarter of", "about ten of", "almost", "about"};
+    private static final String[] QUADRANTS_OF_THE_DAY = {"at night", "in the morning", "in the afternoon", "in the evening"};
 
     public TimeFormatterApproximateWording(Clock clock) {
         super(clock);

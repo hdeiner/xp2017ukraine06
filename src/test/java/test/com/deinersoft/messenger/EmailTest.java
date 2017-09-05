@@ -64,18 +64,18 @@ public class EmailTest {
                 }
             }
         }
-        catch (Exception e) { }
+        catch (Exception ignored) { }
         finally {
             try {
                 if (folder != null && folder.isOpen()) folder.close(true);
                 if (store != null) store.close();
             }
-            catch (Exception e) { }
+            catch (Exception ignored) { }
         }
 
         if (!receivedEmail) {
             try { TimeUnit.SECONDS.sleep(1); }
-            catch(InterruptedException e){ }
+            catch(InterruptedException ignored){ }
         }
 
         return receivedEmail;

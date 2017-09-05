@@ -6,7 +6,7 @@ import com.deinersoft.messenger.Sms;
 import javax.mail.MessagingException;
 import java.io.IOException;
 
-public class Demo {
+class Demo {
     public static void main(String [] args) throws MessagingException, IOException{
 
         Email eMail = new Email("configEmail.properties");

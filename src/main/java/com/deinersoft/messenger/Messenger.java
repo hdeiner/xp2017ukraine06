@@ -6,9 +6,9 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Messenger {
-    Properties localConfiguration = new Properties();
+    final Properties localConfiguration = new Properties();
 
-    public Messenger() { }
+    Messenger() { }
 
     public Messenger(String configurationFile) throws IOException {
         InputStream input = new FileInputStream(configurationFile);

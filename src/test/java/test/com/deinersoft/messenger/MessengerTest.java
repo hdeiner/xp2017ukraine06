@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class MessengerTest {
     @Rule
-    public ExpectedException thrown = ExpectedException.none();
+    public final ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void invalidConfigurationFile() throws Exception {

@@ -1,9 +1,9 @@
 package com.deinersoft.timeteller;
 
-public class TimeFormatter {
-    Clock clock;
+class TimeFormatter {
+    final Clock clock;
 
-    public TimeFormatter(Clock clock) {
+    TimeFormatter(Clock clock) {
         this.clock = clock;
     }
 }

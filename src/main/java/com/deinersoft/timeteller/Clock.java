@@ -5,7 +5,7 @@ import java.time.ZonedDateTime;
 
 public class Clock {
     String timeZone;
-    private ZonedDateTime zonedDateTime;
+    private final ZonedDateTime zonedDateTime;
 
     public Clock() {
         this.timeZone = "LOCAL";

@@ -1,9 +1,9 @@
 package com.deinersoft.timeteller;
 
 public class ClockForTesting extends Clock {
-    private int hour;
-    private int minute;
-    private int second;
+    private final int hour;
+    private final int minute;
+    private final int second;
 
     public ClockForTesting(int hour, int minute, int second, String timeZone) {
         this.timeZone = timeZone;
