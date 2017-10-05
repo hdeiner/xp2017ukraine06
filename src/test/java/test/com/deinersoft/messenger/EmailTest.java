@@ -1,7 +1,7 @@
 package test.com.deinersoft.messenger;
 
 import com.deinersoft.messenger.Email;
-import com.deinersoft.timeteller.ClockForTesting;
+import test.com.deinersoft.clock.ClockForTesting;
 import com.deinersoft.timeteller.TimeFormatterNumeric;
 import com.sun.mail.imap.IMAPFolder;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class EmailTest {
     public void sendAndValidateEmail() throws IOException, MessagingException {
         Email eMail = new Email("configEmail.properties");
 
-        eMail.send(new TimeFormatterNumeric(new ClockForTesting(12,0,0, "LOCAL")).formatTime());
+        eMail.send(new TimeFormatterNumeric().formatTime(new ClockForTesting(12,0,0, "LOCAL")));
 
         boolean receivedEmail = false;
         for (int readAttempts = 1; (readAttempts <= 5) && (!receivedEmail); readAttempts++ ) {

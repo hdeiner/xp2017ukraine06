@@ -1,7 +1,6 @@
 package test.com.deinersoft.clock;
 
 import com.deinersoft.timeteller.Clock;
-import com.deinersoft.timeteller.ClockForTesting;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;

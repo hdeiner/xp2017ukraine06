@@ -4,7 +4,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 public class Clock {
-    String timeZone;
+    private final String timeZone;
     private final ZonedDateTime zonedDateTime;
 
     public Clock() {
@@ -14,7 +14,11 @@ public class Clock {
 
     public Clock(String timeZone) {
         this.timeZone = timeZone;
-        zonedDateTime = ZonedDateTime.now(ZoneId.of(timeZone));
+        if (!timeZone.equals("LOCAL")) {
+            zonedDateTime = ZonedDateTime.now(ZoneId.of(timeZone));
+        } else {
+            zonedDateTime = ZonedDateTime.now();
+        }
     }
 
     public int getHour() { return zonedDateTime.getHour(); }

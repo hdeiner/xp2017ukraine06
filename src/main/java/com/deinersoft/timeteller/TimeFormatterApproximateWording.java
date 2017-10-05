@@ -1,6 +1,6 @@
 package com.deinersoft.timeteller;
 
-public class TimeFormatterApproximateWording extends TimeFormatter {
+public class TimeFormatterApproximateWording implements TimeFormatter {
 
     private static final int SECONDS_IN_A_HALF_MINUTE = 30;
     private static final int HOURS_IN_A_QUARTER_OF_A_DAY = 6;
@@ -11,11 +11,9 @@ public class TimeFormatterApproximateWording extends TimeFormatter {
     private static final String[] FUZZY_TIME_WORDS = {"about", "a little after", "about ten after", "about a quarter after", "about twenty after", "almost half past", "about half past", "almost twenty before", "about twenty before", "about a quarter of", "about ten of", "almost", "about"};
     private static final String[] QUADRANTS_OF_THE_DAY = {"at night", "in the morning", "in the afternoon", "in the evening"};
 
-    public TimeFormatterApproximateWording(Clock clock) {
-        super(clock);
-    }
+    public TimeFormatterApproximateWording() { }
 
-    public String formatTime(){
+    public String formatTime(Clock clock){
         String formattedTime = "";
 
         int hour = clock.getHour();

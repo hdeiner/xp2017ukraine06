@@ -1,4 +1,6 @@
-package com.deinersoft.timeteller;
+package test.com.deinersoft.clock;
+
+import com.deinersoft.timeteller.Clock;
 
 public class ClockForTesting extends Clock {
     private final int hour;
@@ -6,7 +8,7 @@ public class ClockForTesting extends Clock {
     private final int second;
 
     public ClockForTesting(int hour, int minute, int second, String timeZone) {
-        this.timeZone = timeZone;
+        super(timeZone);
         this.hour = hour;
         this.minute = minute;
         this.second = second;
